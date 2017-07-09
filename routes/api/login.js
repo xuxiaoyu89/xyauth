@@ -1,18 +1,39 @@
 const express = require('express');
 const router = express.Router();
-const async = require('async');
 const models = require('../../models');
 const TokenService = require('../../lib/token');
 
-router.post('/login', (req, res) => {
+// req should have username, password, and the site want go
+router.post('/login', async (req, res) => {
   let user = null;
   let accessToken = null;
   let refreshToken = null;
+
+  let username = req.body.username,
+      password = req.body.password,
+      originSite = req.body.originSite;
+
+  await user = models.user.findOne({
+    where: {
+      username: username
+    }
+  });
+
+  if (! user) {
+    res.send({
+      status: 'failed'
+    });
+  }
+
+  // check password
+
+
+
   async.waterfall([
     (cb) => {
       //console.log('in querying database');
       models.user.findOne({where: {
-        username: req.body.username
+        username: username
       }})
       .then(
         userModel => {

@@ -14,4 +14,6 @@ router.get('', (req, res, next) => {
   res.render('index.html');
 });
 
+router.use('/api', require('./api'));
+
 module.exports = router;
