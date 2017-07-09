@@ -12,9 +12,13 @@ const app = express();
 
 app.use(cors());
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+// Set Static Folder
+app.use(express.static('public'));
+app.use(express.static('client'));
 
 app.use(require('morgan')('combined', {'stream': logger.stream}));
 

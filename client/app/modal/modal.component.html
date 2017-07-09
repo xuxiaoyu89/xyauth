@@ -1,0 +1,6 @@
+<div class="modal" 
+	[ngClass]="{'open': isModalOpen()}"
+	(window:resize)="setContentHeight()"
+	>
+    <div #content></div>
+</div>

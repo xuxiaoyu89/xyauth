@@ -10,7 +10,8 @@ router.all('/*', function(req, res, next) {
 });
 
 router.get('', (req, res, next) => {
-  res.status(200).send('Xiaoyu & Qinhua Auth service');
+  //res.status(200).send('Xiaoyu & Qinhua Auth service');
+  res.render('index.html');
 });
 
 module.exports = router;

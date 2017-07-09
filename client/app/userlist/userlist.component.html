@@ -1,0 +1,9 @@
+<p>this is user list</p>
+<!-- <a routerLink="user/1" routerLinkActive="active">1</a>
+<a routerLink="user/2" routerLinkActive="active">2</a> -->
+
+<li *ngFor = "let id of ids">
+	<a routerLink="user/{{id}}" routerLinkActive="active">{{id}}</a>
+</li>
+
+<router-outlet></router-outlet>

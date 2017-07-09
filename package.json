@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./bin/www",
+    "build": "webpack --progress --colors --watch",
     "test": "test"
   },
   "author": "xiaoyu",
@@ -29,6 +30,9 @@
     "winston-papertrail": "^1.0.5"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "node-sass": "^3.11.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2"
   }
 }

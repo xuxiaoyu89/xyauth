@@ -1,0 +1,25 @@
+<form id="login-form" [formGroup] = "loginForm" (ngSubmit)="onSubmit(loginForm)">
+	<input [ngClass]="['text-input']" type="text" name="username" placeholder="username" 
+	onfocus="this.placeholder = ''" 
+	onblur="this.placeholder='username'" 
+	(click)='onChange()'
+	[formControl]="loginForm.controls['username']"
+	/>
+	<br>
+	<input [ngClass]="['text-input']" type="text" name="password" placeholder="password" 
+	onfocus="this.placeholder = ''" 
+	onblur="this.placeholder='password'"
+	(click)='onChange()'
+	[formControl]="loginForm.controls['password']">
+	<br>
+	<input [ngClass]="['button']" type='submit' value="login"/> <br>
+	<a routerLink='/signup' routerLinkActive='active'>signup</a>
+	<div [ngClass]="['form-error-msg']">
+		<a [hidden]="username.valid || !submitted">username required!</a>
+		<a [hidden]="password.valid || !submitted">password required!</a>
+		<a [hidden]="error==null">{{error}}</a>
+	</div>
+</form>
+
+
+<file-uploader></file-uploader>
