@@ -1,1 +1,9 @@
-hello world
+extends layout
+
+block content
+  xyauth
+
+  script!= configScript
+  script(src="./polyfills.js")
+  script(src="./vendor.js")
+  script(src="./bundle.js")

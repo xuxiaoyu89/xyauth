@@ -10,7 +10,7 @@ router.all('/*', function(req, res, next) {
   next();
 });
 
-router.get('', middleware.validateRequest, (req, res, next) => {
+router.get('', (req, res, next) => {
   //res.status(200).send('Xiaoyu & Qinhua Auth service');
   res.render('index');
 });
