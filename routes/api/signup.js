@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const models = require('../../models');
-const TokenService = require('../../lib/token');
+const TokenService = require('../../lib/services/token_service.js');
 
 router.post('/signup', (req, res) => {
   models.user.findOrCreate({

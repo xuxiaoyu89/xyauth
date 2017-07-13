@@ -6,7 +6,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "main.js"
+    filename: "[name].js"
+  },
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
   },
   module: {
     loaders: [

@@ -1,5 +1,5 @@
-const cookieUtil = require('../../lib/util/cookie.js');
-const TokenService = require('../../lib/token.js');
+const cookieUtil = require('../lib/util/cookie.js');
+const TokenService = require('../lib/services/token_service.js');
 
 
 const AuthController = {
