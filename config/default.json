@@ -4,7 +4,11 @@
     "DB_PASSWORD": "root",
     "DB_NAME": "user",
     "DB_HOST": "127.0.0.1",
-    "DB_DIALECT": "mysql"
+    "DB_DIALECT": "mysql",
+    "DB_LOGGING": false
+  },
+  "sequelize": {
+    "migrationStorageTableName": "_migration"
   },
   "aws": {
   	"s3": {

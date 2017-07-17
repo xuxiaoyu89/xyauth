@@ -52,8 +52,9 @@ router.post('/login', async (req, res) => {
   //console.log('sending back response with token');
   //res.status(200).send({status: 'success'});
 
-  //let originSite = 'https://www.google.com';
-  res.redirect(301, originSite);
+  res.status(200).send({
+    status: 'succeed'
+  });
 
 });
 

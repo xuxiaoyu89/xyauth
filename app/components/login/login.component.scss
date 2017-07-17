@@ -1,0 +1,32 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color: #E5E5E5;
+}
+
+.label {
+    font-size: 30px;
+    font-family: monospace;
+    color: coral;
+}
+
+.text-input {
+    height: 28px;
+    font-size: 22px;
+    font-family: monospace;
+    color: yellowgreen;
+    margin: 30, 0, 30, 0;
+}
+
+.button {
+    height: 40px;
+}
+
+pre {
+    background-color: white;
+} 
+

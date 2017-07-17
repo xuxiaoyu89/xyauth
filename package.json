@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "build": "webpack --progress --colors --watch",
+    "lint": "tslint -s node_modules/custom-tslint-formatters/formatters -t grouped 'app/**/*.ts'",
     "test": "test"
   },
   "author": "xiaoyu",
@@ -51,13 +52,13 @@
     "request": "^2.81.0",
     "rxjs": "^5.4.2",
     "sequelize": "^4.3.1",
-    "sequelize-cli": "^2.4.0",
+    "sequelize-cli": "^2.7.0",
     "tmp": "0.0.29",
     "ts-loader": "^2.2.2",
     "typescript": "^2.4.1",
     "winston": "^2.3.1",
     "winston-papertrail": "^1.0.5",
-    "zone.js": "^0.8.13"
+    "zone.js": "^0.8.12"
   },
   "devDependencies": {
     "angular-router-loader": "^0.5.0",

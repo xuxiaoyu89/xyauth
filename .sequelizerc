@@ -1,0 +1,28 @@
+'use strict';
+
+const dbConfig = require('config').database;
+const sequelizeConfig = require('config').sequelize;
+
+const processEnv = process.env;
+const env = processEnv.NODE_ENV || 'development';
+
+// NOTE: Environment config variables are accounted for in the dbConfig already.
+const sequelizeDbConfig = {
+  database: dbConfig.DB_NAME,
+  username: dbConfig.DB_USERNAME,
+  password: dbConfig.DB_PASSWORD,
+  host: dbConfig.DB_HOST,
+  dialect: dbConfig.DB_DIALECT,
+  logging: dbConfig.DB_LOGGING
+};
+
+let finalSequelizeConfig = {
+  config: __filename
+};
+
+finalSequelizeConfig[env] = Object.assign(
+  sequelizeConfig,
+  sequelizeDbConfig
+);
+
+module.exports = finalSequelizeConfig;

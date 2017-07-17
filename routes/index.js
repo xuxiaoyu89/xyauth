@@ -10,11 +10,11 @@ router.all('/*', function(req, res, next) {
   next();
 });
 
-router.get('', (req, res, next) => {
-  //res.status(200).send('Xiaoyu & Qinhua Auth service');
+router.use('/api', require('./api'));
+// for all get request, send the main page instead of trying to find a file in this path.
+// so there won't be a # in the url
+router.get('*', (req, res, next) => {
   res.render('index');
 });
-
-router.use('/api', require('./api'));
 
 module.exports = router;
